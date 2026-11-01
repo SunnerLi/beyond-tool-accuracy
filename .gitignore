@@ -1,0 +1,6 @@
+.DS_store
+.idea
+
+# Nerfies template download, kept locally, not part of the website
+/nerfies.github.io-main/
+/nerfies.github.io-main.zip
