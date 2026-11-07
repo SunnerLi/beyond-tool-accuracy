@@ -9,7 +9,8 @@
   <meta property="og:title" content="Beyond Tool Accuracy: End-to-End Reliability of On-Device SMS Agents Under Homoglyph Attacks"/>
   <meta property="og:description" content="We fix a homoglyph-attack vulnerability in lightweight URL classifiers via CHT loss, then show that whether the fix reaches the agent's decision depends on the host LLM."/>
   <meta property="og:url" content="https://sunnerli.github.io/beyond-tool-accuracy/"/>
-  <meta property="og:image" content="https://sunnerli.github.io/beyond-tool-accuracy/static/images/teaser.png"/>
+  <meta property="og:image" content="https://sunnerli.github.io/beyond-tool-accuracy/static/images/og_image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <title>Beyond Tool Accuracy: End-to-End Reliability of On-Device SMS Agents Under Homoglyph Attacks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -384,6 +385,15 @@
         <b>FBR</b>, random variant &rarr; blocked; <b>Benign FPR</b>, benign &rarr; blocked.
       </p>
     </div>
+    <img src="./static/images/host_response.svg" class="figure"
+         alt="For each host, attack success and benign block rates with no tool, with a classifier, and with a classifier plus CHT. Qwen2.5 moves with the tool; Llama-3.2 and Gemma-4 barely move."/>
+    <p class="figure-caption has-text-centered">
+      Agent outcomes, averaged over the three classifiers. Attacks succeed = ASR; Benign blocked = Benign FPR.
+      Without a tool, every host blocks nearly everything, so ASR is 0 by default.
+      <b style="color:#2e8b3e;">Qwen2.5</b> follows the tool: it stops over-blocking, and CHT then cuts ASR from 30% to 2%.
+      <b style="color:#d98200;">Llama-3.2 and Gemma-4</b> stay near their no-tool behavior.
+    </p>
+    <br/>
     <div class="table-container">
       <table class="table is-narrow result-table">
         <thead>
